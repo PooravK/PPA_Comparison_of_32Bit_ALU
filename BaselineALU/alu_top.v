@@ -77,7 +77,7 @@ module alu_top(
 
     assign zero_flag = (alu_out == 32'b0)?1'b1:1'b0;
 
-    always @(posedge clk or clear)begin
+    always @(posedge clk or posedge clear)begin
         if (clear)begin
             alu_out = 32'b0;
         end else begin
@@ -92,8 +92,9 @@ module alu_top(
                 ARITHMETIC_RS: alu_out = ARS_out;
                 LESS_THAN_UNSIGNED: alu_out = {31'b0, SLTU_out};
                 LESS_THAN_SIGNED: alu_out = {31'b0, SLT_out};
-                default: alu_out = 32'b0
+                default: alu_out = 32'b0;
             endcase
+        end
     end
 
 endmodule

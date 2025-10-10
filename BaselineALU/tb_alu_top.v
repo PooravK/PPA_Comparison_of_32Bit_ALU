@@ -157,16 +157,16 @@ module tb_alu_top();
             #10;
 
             control_signal = 4'b1001; // Less than signed
-            alu_in0 = 32'sd-20;
+            alu_in0 = -32'd20;
             alu_in1 = 32'd40;
             #10;
 
             alu_in0 = 32'd60;
-            alu_in1 = 32'sd-40;
+            alu_in1 = -32'd40;
             #10;
 
-            alu_in0 = 32'sd-40;
-            alu_in1 = 32'sd-40;
+            alu_in0 = -32'd40;
+            alu_in1 = -32'd40;
             #10;
 
             clear = 1'b1; #10;

@@ -3,5 +3,5 @@ module gate_xor(
     output [31:0]xor_out
     );
 
-    assign xor_out = xor_in0 ^ xor_in1 
+    assign xor_out = xor_in0 ^ xor_in1;
 endmodule
