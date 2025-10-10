@@ -4,9 +4,9 @@ module shift_module(
     output [31:0]LSL, LSR, ASR
     );
 
-    wire sign_bit;
-
     assign LSL = shift_in0 << shift_in1; 
     assign LSR = shift_in0 >> shift_in1;
     assign ASR = shift_in0 >>> shift_in1; 
+
+    // Can also do: assign ASR = {{shift_in1{sign_bit}}, shift_in0[31:shift_in1]};
 endmodule
