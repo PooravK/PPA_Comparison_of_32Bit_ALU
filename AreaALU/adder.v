@@ -8,7 +8,7 @@ module adder32bit(
 
     wire [31:0] modified_in1;
 
-    assign modified_in1 = (en == 1)? (modified_in1 = ~adder_in1):(modified_in1 = adder_in1);
+    assign modified_in1 = (en == 1)? ~adder_in1:adder_in1;
 
     wire c5;
     wire c6;

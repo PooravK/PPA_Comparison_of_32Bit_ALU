@@ -1,0 +1,11 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/AreaALU/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder32bit
+ERROR: [VRFC 10-8766] assignment subexpression is only allowed in SystemVerilog mode [C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/AreaALU/adder.v:11]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register modified_in1 is not permitted, left-hand side should be reg/integer/time/genvar [C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/AreaALU/adder.v:11]
+ERROR: [VRFC 10-8530] module 'adder32bit' is ignored due to previous errors [C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/AreaALU/adder.v:1]
+INFO: [VRFC 10-311] analyzing module adder8bit
+ERROR: [VRFC 10-8530] module 'adder8bit' is ignored due to previous errors [C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/AreaALU/adder.v:47]
+INFO: [VRFC 10-311] analyzing module adder4bit
+ERROR: [VRFC 10-8530] module 'adder4bit' is ignored due to previous errors [C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/AreaALU/adder.v:72]
+INFO: [VRFC 10-311] analyzing module adder1bit
+ERROR: [VRFC 10-8530] module 'adder1bit' is ignored due to previous errors [C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/AreaALU/adder.v:113]
