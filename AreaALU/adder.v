@@ -1,9 +1,14 @@
 module adder32bit(
     input [31:0] adder_in0, adder_in1,
     input carry_in,
+    input en,
     output [31:0] adder_out,
     output carry_out
     );
+
+    wire [31:0] modified_in1;
+
+    assign modified_in1 = (en == 1)? (modified_in1 = ~adder_in1):(modified_in1 = adder_in1);
 
     wire c5;
     wire c6;
@@ -11,28 +16,28 @@ module adder32bit(
 
     adder8bit block6(
         .adder_in0(adder_in0[7:0]),
-        .adder_in1(adder_in1[7:0]),
-        .carry_in(carry_in),
+        .adder_in1(modified_in1[7:0]),
+        .carry_in(en),
         .adder_out(adder_out[7:0]),
         .carry_out(c5)
         );
     adder8bit block7(
         .adder_in0(adder_in0[15:8]),
-        .adder_in1(adder_in1[15:8]),
+        .adder_in1(modified_in1[15:8]),
         .carry_in(c5),
         .adder_out(adder_out[15:8]),
         .carry_out(c6)
         );
     adder8bit block8(
         .adder_in0(adder_in0[23:16]),
-        .adder_in1(adder_in1[23:16]),
+        .adder_in1(modified_in1[23:16]),
         .carry_in(c6),
         .adder_out(adder_out[23:16]),
         .carry_out(c7)
         );
     adder8bit block9(
         .adder_in0(adder_in0[31:24]),
-        .adder_in1(adder_in1[31:24]),
+        .adder_in1(modified_in1[31:24]),
         .carry_in(c7),
         .adder_out(adder_out[31:24]),
         .carry_out(carry_out)

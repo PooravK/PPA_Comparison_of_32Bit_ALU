@@ -35,13 +35,6 @@ module alu_top(
         .adder_out(addition_out)
         );
 
-    subtractor32bit SUBTRACTION(
-        .subtractor_in0(alu_in0),
-        .subtractor_in1(alu_in1),
-        .borrow_in(1'b0),
-        .subtractor_out(subtraction_out)
-        );
-
     gate_and AND_OP(
         .and_in0(alu_in0),
         .and_in1(alu_in1),
