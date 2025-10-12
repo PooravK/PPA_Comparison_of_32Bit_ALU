@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/BaselineALU/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder32bit
+INFO: [VRFC 10-311] analyzing module adder8bit
+INFO: [VRFC 10-311] analyzing module adder4bit
+INFO: [VRFC 10-311] analyzing module adder1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/BaselineALU/alu_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/BaselineALU/comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/BaselineALU/gate_and.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gate_and
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/BaselineALU/gate_or.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gate_or
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/BaselineALU/gate_xor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gate_xor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/BaselineALU/shift_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/BaselineALU/subtractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module subtractor32bit
+INFO: [VRFC 10-311] analyzing module subtractor8bit
+INFO: [VRFC 10-311] analyzing module subtractor4bit
+INFO: [VRFC 10-311] analyzing module subtractor1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/BaselineALU/tb_alu_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_alu_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/poora/Desktop/BASELINE_ALU_32BIT/BASELINE_ALU_32BIT.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
