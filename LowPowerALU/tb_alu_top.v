@@ -6,6 +6,7 @@ module tb_alu_top();
     reg [3:0]control_signal;
     reg clk;
     reg clear;
+    reg alu_en;
     wire [31:0]alu_out;
     wire zero_flag;
 
@@ -16,7 +17,8 @@ module tb_alu_top();
         .alu_out(alu_out),
         .zero_flag(zero_flag),
         .clk(clk),
-        .clear(clear)
+        .clear(clear),
+        .alu_en(alu_en)
         );
 
         initial clk = 1'b0;
@@ -27,9 +29,16 @@ module tb_alu_top();
             $dumpfile("alu_topwaveform.vcd");
             $dumpvars(0, tb_alu_top);
 
+            alu_en = 1'b0; #10;
+
+            alu_en = 1'b1;
+
             clear = 1'b1; #10;
 
             clear = 1'b0; #10;
+
+            //$saif_set_scope(uut);
+            //$saif_on();
 
             control_signal = 4'b0000; // ADD
             alu_in0 = 32'hFFFFFFFF;
@@ -38,6 +47,11 @@ module tb_alu_top();
 
             alu_in0 = 32'hAAAAAAAA;
             alu_in1 = 32'h55555555;
+            #10;
+
+            alu_en = 1'b0;
+            #20;
+            alu_en = 1'b1;
             #10;
 
             control_signal = 4'b0001; // SUB
@@ -53,6 +67,11 @@ module tb_alu_top();
             alu_in1 = 32'd10;
             #10;
 
+            alu_en = 1'b0;
+            #20;
+            alu_en = 1'b1;
+            #10;
+
             control_signal = 4'b0010; // AND
             alu_in0 = 32'h11111111;
             alu_in1 = 32'b11111111;
@@ -60,6 +79,11 @@ module tb_alu_top();
 
             alu_in0 = 32'b10101010;
             alu_in1 = 32'b01010101;
+            #10;
+
+            alu_en = 1'b0;
+            #20;
+            alu_en = 1'b1;
             #10;
 
             control_signal = 4'b0011; // OR
@@ -71,6 +95,11 @@ module tb_alu_top();
             alu_in1 = 32'b01010101;
             #10;
 
+            alu_en = 1'b0;
+            #20;
+            alu_en = 1'b1;
+            #10;
+
             control_signal = 4'b0100; // XOR
             alu_in0 = 32'h11111111;
             alu_in1 = 32'b11111111;
@@ -78,6 +107,11 @@ module tb_alu_top();
 
             alu_in0 = 32'b10101010;
             alu_in1 = 32'b01010101;
+            #10;
+
+            alu_en = 1'b0;
+            #20;
+            alu_en = 1'b1;
             #10;
 
             control_signal = 4'b0101; // Logical left shift
@@ -101,6 +135,11 @@ module tb_alu_top();
             alu_in1 = 5'b10000;
             #10;
 
+            alu_en = 1'b0;
+            #20;
+            alu_en = 1'b1;
+            #10;
+
             control_signal = 4'b0110; // Logical right shift
             alu_in0 = 32'b10101010;
             alu_in1 = 5'b00001;
@@ -120,6 +159,11 @@ module tb_alu_top();
 
             alu_in0 = 32'b10101010;
             alu_in1 = 5'b10000;
+            #10;
+
+            alu_en = 1'b0;
+            #20;
+            alu_en = 1'b1;
             #10;
 
             control_signal = 4'b0111; // Arithmetic right shift
@@ -143,6 +187,11 @@ module tb_alu_top();
             alu_in1 = 5'b10000;
             #10;
 
+            alu_en = 1'b0;
+            #20;
+            alu_en = 1'b1;
+            #10;
+
             control_signal = 4'b1000; // Less than unsigned
             alu_in0 = 32'd20;
             alu_in1 = 32'd40;
@@ -154,6 +203,11 @@ module tb_alu_top();
 
             alu_in0 = 32'd40;
             alu_in1 = 32'd40;
+            #10;
+
+            alu_en = 1'b0;
+            #20;
+            alu_en = 1'b1;
             #10;
 
             control_signal = 4'b1001; // Less than signed
@@ -170,7 +224,9 @@ module tb_alu_top();
             #10;
 
             clear = 1'b1; #10;
+            alu_en = 1'b0;
             
+            //$saif_off();
             $finish;
         end
 endmodule

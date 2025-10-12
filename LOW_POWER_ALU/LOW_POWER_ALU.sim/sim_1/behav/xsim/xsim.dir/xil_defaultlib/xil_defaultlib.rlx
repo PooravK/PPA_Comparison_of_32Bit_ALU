@@ -1,0 +1,14 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LOW_POWER_ALU/LOW_POWER_ALU.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/adder.v,1760119549,verilog,,C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/alu_top.v,,adder1bit;adder32bit;adder4bit;adder8bit,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/alu_top.v,1760263018,verilog,,C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/comparator.v,,alu_top,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/comparator.v,1760124501,verilog,,C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/gate_and.v,,comparator,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/gate_and.v,1760119879,verilog,,C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/gate_or.v,,gate_and,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/gate_or.v,1760119877,verilog,,C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/gate_xor.v,,gate_or,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/gate_xor.v,1760127881,verilog,,C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/shift_module.v,,gate_xor,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/shift_module.v,1760127934,verilog,,C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/subtractor.v,,shift_module,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/subtractor.v,1760120251,verilog,,C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/tb_alu_top.v,,subtractor1bit;subtractor32bit;subtractor4bit;subtractor8bit,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/poora/Desktop/ALU_Comparison_PBL_Project/LowPowerALU/tb_alu_top.v,1760265428,verilog,,,,tb_alu_top,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
