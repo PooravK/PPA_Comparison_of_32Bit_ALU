@@ -1,5 +1,5 @@
 module alu_top(
-    input clk, clear,
+    input clk, clear, alu_en,
     input [31:0]alu_in0, alu_in1,
     input [3:0]control_signal,
     output reg [31:0]alu_out,
@@ -16,6 +16,9 @@ module alu_top(
     wire [31:0]ARS_out;
     wire SLTU_out;
     wire SLT_out;
+
+    reg latch_en;
+    wire clk_gate;
 
     parameter ADD = 4'b0000;
     parameter SUB = 4'b0001;
@@ -77,7 +80,15 @@ module alu_top(
 
     assign zero_flag = (alu_out == 32'b0)?1'b1:1'b0;
 
-    always @(posedge clk or posedge clear)begin
+    always @(*)begin
+        if (!clk)begin
+            latch_en = alu_en;
+        end
+    end
+
+    assign clk_gate = latch_en & clk;
+
+    always @(posedge clk_gate or posedge clear)begin
         if (clear)begin
             alu_out = 32'b0;
         end else begin
