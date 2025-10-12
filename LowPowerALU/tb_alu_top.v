@@ -37,9 +37,6 @@ module tb_alu_top();
 
             clear = 1'b0; #10;
 
-            //$saif_set_scope(uut);
-            //$saif_on();
-
             control_signal = 4'b0000; // ADD
             alu_in0 = 32'hFFFFFFFF;
             alu_in1 = 32'h00000001;
@@ -225,8 +222,7 @@ module tb_alu_top();
 
             clear = 1'b1; #10;
             alu_en = 1'b0;
-            
-            //$saif_off();
+
             $finish;
         end
 endmodule
