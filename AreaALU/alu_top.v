@@ -7,7 +7,6 @@ module alu_top(
     );
 
     wire [31:0]addition_out;
-    wire [31:0]subtraction_out;
     wire [31:0]and_operation_out;
     wire [31:0]or_operation_out;
     wire [31:0]xor_operation_out;
@@ -16,6 +15,8 @@ module alu_top(
     wire [31:0]ARS_out;
     wire SLTU_out;
     wire SLT_out;
+
+    wire subtract_en;
 
     parameter ADD = 4'b0000;
     parameter SUB = 4'b0001;
@@ -31,7 +32,8 @@ module alu_top(
     adder32bit ADDITION(
         .adder_in0(alu_in0),
         .adder_in1(alu_in1),
-        .carry_in(1'b0),
+        .carry_in(subtract_en),
+        .en(subtract_en),
         .adder_out(addition_out)
         );
 
@@ -69,6 +71,7 @@ module alu_top(
         );
 
     assign zero_flag = (alu_out == 32'b0)?1'b1:1'b0;
+    assign subtract_en = (control_signal == 4'b0001);
 
     always @(posedge clk or posedge clear)begin
         if (clear)begin
@@ -76,7 +79,7 @@ module alu_top(
         end else begin
             case (control_signal)
                 ADD: alu_out = addition_out;
-                SUB: alu_out = subtraction_out;
+                SUB:alu_out = addition_out; 
                 AND: alu_out = and_operation_out;
                 OR: alu_out = or_operation_out;
                 XOR: alu_out = xor_operation_out;
